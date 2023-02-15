@@ -17,6 +17,7 @@
 package fourbyte
 
 import (
+	"fmt"
 	"math/big"
 	"reflect"
 	"strings"
@@ -166,6 +167,7 @@ func TestMaliciousABIStrings(t *testing.T) {
 	}
 	data := common.Hex2Bytes("4401a6e40000000000000000000000000000000000000000000000000000000000000012")
 	for i, tt := range tests {
+		fmt.Printf("tt:%v,data:%v", tt, data)
 		_, err := verifySelector(tt, data)
 		if err == nil {
 			t.Errorf("test %d: expected error for selector '%v'", i, tt)

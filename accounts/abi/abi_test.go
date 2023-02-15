@@ -320,7 +320,6 @@ func TestMultiPack(t *testing.T) {
 	sig = append(sig, make([]byte, 64)...)
 	sig[35] = 10
 	sig[67] = 11
-
 	packed, err := abi.Pack("bar", uint32(10), uint16(11))
 	if err != nil {
 		t.Fatal(err)
