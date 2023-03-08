@@ -430,10 +430,11 @@ func TestT2Base58(t *testing.T) {
 //0000000000000000000000007f3ea0ff2cc11fc655f7ca546c2575003dc842c9
 //4d4c376f425a6269744243635868724a777142686861324d55696d6436534d395a36
 func TestHex(t *testing.T) {
-	s := "MTotTKfAJRxrfvEwEJvtgCqzH9GkpMmAUg"
+	s := "T20000MTotTKfAJRxrfvEwEJvtgCqzH9GkpMmAUg"
 	a := hex.EncodeToString([]byte(s))
 	fmt.Println(a)
 	fmt.Println(a[len(a)-40:])
 	b, _ := hex.DecodeString("0000000000000000000000004577454a76746743717a4839476b704d6d415567")
+
 	fmt.Println(string(b))
 }
